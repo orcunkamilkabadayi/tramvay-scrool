@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Kapanış görseli yer tutucusu">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#081d26"/><stop offset="1" stop-color="#375157"/>
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#c5d8cf" stroke-opacity=".1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <circle cx="1008" cy="358" r="220" fill="#d5ed87" fill-opacity=".07" stroke="#d5ed87" stroke-opacity=".38"/>
+  <circle cx="1008" cy="358" r="124" fill="none" stroke="#d5ed87" stroke-opacity=".22"/>
+  <path d="M772 358h472M1008 122v472" stroke="#d5ed87" stroke-opacity=".19"/>
+  <text x="84" y="614" fill="#b9d6ce" font-family="Arial,sans-serif" font-size="22" letter-spacing="6">KAPANIŞ VİDEOSU · GÖRSEL YER TUTUCU</text>
+</svg>

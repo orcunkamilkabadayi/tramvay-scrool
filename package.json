@@ -1,0 +1,13 @@
+{
+  "name": "etkilesimli-tramvay-sergisi-taslak",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/app.js --bundle --minify --format=iife --target=es2020 --outfile=app.js",
+    "watch": "esbuild src/app.js --bundle --format=iife --target=es2020 --outfile=app.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

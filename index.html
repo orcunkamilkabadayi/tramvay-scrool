@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071923">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Etkileşimli Tramvay Sergisi | Proje Taslağı</title>
+  <meta name="description" content="Kaydırmayla ilerleyen üç boyutlu, örnek içerikli etkileşimli proje sergisi taslağı.">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#acilis" aria-label="Sunum başlangıcı">
+      <img src="assets/mark.svg" alt="Örnek proje işareti">
+      <span><strong>PROJE TASLAĞI</strong><small>Etkileşimli üç boyutlu sergi</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Sunum bölümleri">
+      <a href="#acilis"><span>01</span> AÇILIŞ</a>
+      <a href="#sergi"><span>02</span> SERGİ</a>
+      <a href="#kapanis"><span>03</span> KAPANIŞ</a>
+    </nav>
+    <button class="header-action" id="edit-open" type="button">KOLEKSİYONU DÜZENLE <span>↗</span></button>
+  </header>
+
+  <main>
+    <section id="acilis" class="film-section intro-section" aria-label="Tramvay açılış filmi">
+      <div class="sticky-stage">
+        <img class="video-poster" src="assets/giris-placeholder.svg" alt="Açılış görseli yer tutucusu">
+        <video id="intro-video" class="scroll-video" src="assets/giris-placeholder.mp4" muted playsinline preload="auto" poster="assets/giris-placeholder.svg" aria-label="Açılış videosu yer tutucusu"></video>
+        <div class="film-shade"></div>
+        <div class="film-copy intro-copy"><div class="eyebrow light"><span></span> ETKİLEŞİMLİ · PROJE TASLAĞI</div><h1>Yolculuk<br><em>burada başlıyor.</em></h1><p>Örnek projeleri üç boyutlu bir sergi içinde keşfedin.</p></div>
+        <div class="film-end" id="intro-end" aria-hidden="true"><span>01 / 03</span><strong>ŞİMDİ İÇERİ GİRELİM</strong><small>Aşağı kaydırın</small></div>
+        <div class="scroll-cue"><span class="scroll-line"></span> KAYDIRARAK İLERLEYİN</div>
+        <div class="film-index"><span>01</span><span class="index-line"></span><span>03</span></div>
+        <div class="film-progress" aria-hidden="true"><span id="intro-progress"></span></div>
+      </div>
+    </section>
+
+    <section id="sergi" class="museum-section" aria-label="Tramvay içi interaktif proje sergisi">
+      <div class="sticky-stage museum-stage">
+        <canvas id="museum-canvas" aria-label="Üç boyutlu tramvay iç mekânı"></canvas>
+        <div id="museum-to-film" class="museum-to-film" aria-hidden="true"><img src="assets/cikis-placeholder.svg" alt=""></div>
+        <div class="museum-fallback" id="museum-fallback" hidden><div class="eyebrow">DİJİTAL KOLEKSİYON</div><h2>Projeler tramvayda buluşuyor.</h2><p>Bu tarayıcıda üç boyutlu görünüm kullanılamıyor. Projeleri aşağıdaki duraklardan açabilirsiniz.</p><div id="fallback-list" class="fallback-list"></div></div>
+        <div class="museum-vignette"></div>
+        <div class="museum-head"><div class="eyebrow light"><span></span> 02 / 03 · TRAMVAY İÇİ SERGİ</div><h2>Her durakta<br><em>yeni bir fikir.</em></h2><p>Kaydırarak ilerleyin veya serbest gezintiye geçin. Görsellere tıklayıp projeyi inceleyin.</p></div>
+        <div class="museum-crosshair" aria-hidden="true">＋</div>
+        <div class="museum-hint">GÖRSELLERE TIKLAYIN <span>·</span> DURAKLAR ARASINDA KAYDIRIN</div>
+        <button id="free-roam" class="free-roam-button" type="button" aria-pressed="false">SERBEST GEZİNTİ <span>WASD + FARE ↗</span></button>
+        <div id="free-roam-help" class="free-roam-help" aria-live="polite">WASD: ilerle / yana geç · Fare: 360° bak · Esc: sunuma dön</div>
+        <div id="door-slogan" class="door-slogan" aria-hidden="true"><small>YENİ BİR YOLCULUĞUN EŞİĞİNDE</small><strong>YENİ <em>FİKİRLERİ KEŞFEDİN</em></strong><span>İLERLEMEK İÇİN AŞAĞI KAYDIRIN ↓</span></div>
+        <div class="museum-hud"><div class="hud-label"><span>ŞU ANKİ DURAK</span><strong id="current-stop-title">01 · Proje 01</strong></div><div class="hud-buttons"><button id="prev-stop" type="button" aria-label="Önceki proje">←</button><button id="next-stop" type="button" aria-label="Sonraki proje">→</button></div></div>
+        <div id="stop-rail" class="stop-rail" aria-label="Proje durakları"></div>
+        <div class="museum-progress" aria-hidden="true"><span id="museum-progress"></span></div>
+      </div>
+    </section>
+
+    <section id="kapanis" class="film-section outro-section" aria-label="Tramvay kapanış filmi">
+      <div class="sticky-stage">
+        <img class="video-poster" src="assets/cikis-placeholder.svg" alt="Kapanış görseli yer tutucusu">
+        <video id="outro-video" class="scroll-video" src="assets/cikis-placeholder.mp4" muted playsinline preload="metadata" poster="assets/cikis-placeholder.svg" aria-label="Kapanış videosu yer tutucusu"></video>
+        <div class="film-shade outro-shade"></div>
+        <div class="film-copy outro-copy"><div class="eyebrow light"><span></span> 03 / 03 · PROJE TASLAĞI</div><h2>Birlikte,<br><em>yeni fikirleri<br>keşfedelim.</em></h2><p>Başlık ve alt başlık alanı</p></div>
+        <div class="film-index"><span>03</span><span class="index-line"></span><span>03</span></div>
+        <div class="film-progress" aria-hidden="true"><span id="outro-progress"></span></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="project-dialog" class="overlay-dialog" aria-label="Proje ayrıntısı"><div class="dialog-shell project-shell"><button class="close-button" data-close="project-dialog" type="button" aria-label="Kapat">×</button><div class="detail-visual"><img id="detail-image" alt=""><div id="detail-placeholder" class="detail-placeholder">GÖRSEL EKLENECEK</div></div><div class="detail-content"><div class="eyebrow" id="detail-kicker">DURAK 01</div><h2 id="detail-title">Proje 01</h2><p id="detail-description"></p><dl><div><dt>KATEGORİ</dt><dd id="detail-category"></dd></div><div><dt>YIL</dt><dd id="detail-year"></dd></div><div><dt>SORUMLU</dt><dd id="detail-role"></dd></div></dl><div class="detail-tags" id="detail-tags"></div><button id="detail-edit" class="solid-button" type="button">BU PROJEYİ DÜZENLE ↗</button></div></div></dialog>
+
+  <dialog id="editor-dialog" class="overlay-dialog editor-dialog" aria-label="Proje koleksiyonu düzenleyici"><div class="dialog-shell editor-shell"><button class="close-button" data-close="editor-dialog" type="button" aria-label="Kapat">×</button><div class="editor-intro"><div class="eyebrow">KOLEKSİYON YÖNETİMİ</div><h2>Kendi projelerinizi ekleyin.</h2><p>10 duraktaki görselleri ve metinleri düzenleyin. Başka bilgisayarda açmak için JSON kopyası indirin.</p></div><div class="editor-grid"><div class="editor-preview"><label for="project-picker">DURAK SEÇİN</label><select id="project-picker"></select><img id="editor-image" alt="Seçili proje görseli"><div id="editor-image-placeholder">PROJE GÖRSELİ EKLEYİN</div><label class="upload-button" for="image-input">GÖRSEL YÜKLE <span>＋</span></label><input id="image-input" type="file" accept="image/png,image/jpeg,image/webp" hidden><small>PNG, JPG veya WebP. En fazla 20 MB.</small></div><div class="editor-fields"><label>Proje başlığı<input id="project-title" maxlength="100"></label><div class="editor-pair"><label>Kategori<input id="project-category" maxlength="80"></label><label>Yıl<input id="project-year" maxlength="20"></label></div><label>Kısa açıklama<textarea id="project-description" rows="4" maxlength="3000"></textarea></label><label>Sorumlu birim / rol<input id="project-role" maxlength="160"></label><label>Etiketler / yaklaşım<input id="project-tags" maxlength="500" placeholder="Virgülle ayırın"></label><span class="save-status" id="save-status">Değişiklikler bu tarayıcıda saklanır.</span></div></div><div class="editor-actions"><button id="export-json" type="button">JSON YEDEĞİ İNDİR ↓</button><label class="button-like" for="import-json">JSON AÇ ↑</label><input id="import-json" type="file" accept=".json,application/json" hidden><button id="reset-project" type="button">SEÇİLİ PROJEYİ SIFIRLA</button></div></div></dialog>
+
+  <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
