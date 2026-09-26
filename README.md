@@ -1,9 +1,9 @@
 # Tramvay Scroll Sergisi
 
-A??l?? ve kapan?? scroll videolar?, etkile?imli 3D tramvay i? mek?n? ve on bo? proje dura?? i?eren yerel sunum prototipi. Videolar hareketli renkli yer tutuculard?r; ger?ek ara? veya kuruma ait ?ekim i?ermez.
+Açılış ve kapanış scroll videoları, etkileşimli 3D tramvay iç mekânı ve on boş proje durağı içeren yerel sunum prototipi. Videolar hareketli renkli yer tutuculardır; gerçek araç veya kuruma ait çekim içermez.
 
-## Ba?latma
+## Başlatma
 
-T?m klas?r? birlikte tutup `index.html` dosyas?n? g?ncel Chrome veya Edge ile a??n. ?nternet, sunucu, hesap veya API anahtar? gerekmez. Kayd?rma, serbest gezinti, g?rsel ekleme ve JSON yede?i ayr?nt?lar? i?in [KULLANIM.md](KULLANIM.md) dosyas?na bak?n.
+Tüm klasörü birlikte tutup `index.html` dosyasını güncel Chrome veya Edge ile açın. İnternet, sunucu, hesap veya API anahtarı gerekmez. Kaydırma, serbest gezinti, görsel ekleme ve JSON yedeği ayrıntıları için [KULLANIM.md](KULLANIM.md) dosyasına bakın.
 
-`vendor/THREE-LICENSE.txt` ???nc? taraf Three.js lisans?n? i?erir. ?? mek?n bir konsepttir; onayl? ara? ?l??s? veya birebir dijital ikiz de?ildir.
+`vendor/THREE-LICENSE.txt` üçüncü taraf Three.js lisansını içerir. İç mekân bir konsepttir; onaylı araç ölçüsü veya birebir dijital ikiz değildir.
